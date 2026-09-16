@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Arquitectura de la palabra</title>
+  
+  <link rel="stylesheet" href="css/estilos.css">
+  
+</head>
+
+<body>
+
+  <main class="container">
+
+    <h1>Arquitectura de la Palabra</h1>
+
+    <section class="controls">
+
+      <div class="input-group">
+
+        <label for="wordInput">
+          Escribí una palabra o frase corta
+        </label>
+
+        <input
+          type="text"
+          id="wordInput"
+          value=""
+          placeholder="Escribí aquí..."
+          maxlength="77"
+          autofocus
+        >
+
+      </div>
+
+      <div class="options-grid">
+
+        <div class="input-group">
+
+          <label for="styleSelect">
+            Estilo de composición
+          </label>
+
+          <select id="styleSelect">
+
+            <option value="superposition">
+              Superposición caótica
+            </option>
+
+            <option value="blended" selected>
+              Mezcla de capas
+            </option>
+
+            <option value="subtraction">
+              Sustracción
+            </option>
+
+            <option value="grid">
+              Mosaico geométrico
+            </option>
+
+          </select>
+
+        </div>
+
+        <div class="input-group">
+
+          <label for="alphaSelect">
+            Opacidad de cada capa
+          </label>
+
+          <select id="alphaSelect">
+
+            <option value="0.25">
+              25% — Muy suave
+            </option>
+
+            <option value="0.4">
+              40% — Suave
+            </option>
+
+            <option value="0.65" selected>
+              65% — Equilibrado
+            </option>
+
+            <option value="0.9">
+              90% — Intenso
+            </option>
+
+          </select>
+
+        </div>
+
+        <button id="regenerateBtn" type="button">
+          Reorganizar
+        </button>
+
+        <button
+          id="downloadBtn"
+          class="btn-primary"
+          type="button"
+        >
+          Guardar imagen
+        </button>
+
+      </div>
+
+      <p id="mensaje" class="mensaje">
+        Cargando las imágenes de las letras...
+      </p>
+
+    </section>
+
+    <div class="canvas-container">
+
+      <canvas
+        id="artCanvas"
+        width="800"
+        height="800"
+      >
+        Tu navegador no puede mostrar esta obra.
+      </canvas>
+
+    </div>
+
+  </main>
+
+  <!-- JavaScript ubicado junto al index.html -->
+  <script src="js/java.js"></script>
+
+</body>
+
+</html>
