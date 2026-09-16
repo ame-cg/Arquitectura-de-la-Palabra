@@ -100,9 +100,13 @@ function cargarBancoDeImagenes() {
     // Ejemplos de las rutas generadas:
     // img/a.png
     // img/b.png
-    // img/ñ.png
-    imagen.src =
-      `${carpetaImagenes}/${letra}.${extensionImagenes}`;
+    // img/enie.png
+    // Para la ñ usamos un nombre sin caracteres especiales.
+const nombreArchivo =
+  letra === "ñ" ? "enie" : letra;
+
+imagen.src =
+  `${carpetaImagenes}/${nombreArchivo}.${extensionImagenes}`;
 
   });
 
